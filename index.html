@@ -49,7 +49,7 @@
             <!-- cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- card-1 -->
-                <div onclick="clickHandler()" class="card bg-white border cursor-pointer">
+                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="./images/prod1.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
                     </figure>
@@ -66,7 +66,7 @@
                     </div>
                   </div>
                 <!-- card-2 -->
-                <div class="card bg-white border cursor-pointer">
+                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="./images/prod2.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
                     </figure>
@@ -78,12 +78,12 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           </div>
-                      <h2 class="card-title">K. Accessories</h2>
+                      <h2 class="card-title">Chopping Boards</h2>
                       <p class="text-gray-400">25.00 TK</p>
                     </div>
                   </div>
                <!-- card-3 -->
-               <div class="card bg-white border cursor-pointer">
+               <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
                 <figure class="px-10 pt-10">
                   <img src="./images/prod3.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
                 </figure>
@@ -107,7 +107,7 @@
             <!-- cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- card-4 -->
-                <div class="card bg-white border cursor-pointer">
+                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="./images/prod7.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
                     </figure>
@@ -124,7 +124,7 @@
                     </div>
                   </div>
                 <!-- card-5 -->
-                <div class="card bg-white border cursor-pointer">
+                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="./images/prod8.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
                     </figure>
@@ -141,7 +141,7 @@
                     </div>
                   </div>
                <!-- card-6 -->
-               <div class="card bg-white border cursor-pointer">
+               <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
                 <figure class="px-10 pt-10">
                   <img src="./images/prod9.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
                 </figure>
@@ -165,20 +165,20 @@
         <div class=" px-4 pt-16 items-center">
             <h1 class="font-semibold mb-2">Have a coupon?</h1>
             <div class="relative mb-4">
-                <input type="text" placeholder="coupon code" class="input input-bordered w-full pr-16" /> 
-                <button class="btn bg-prime-color text-white absolute top-0 right-0 rounded-l-none">Apply</button>
+                <input id="coupon-field" type="text" placeholder="coupon code" class="input input-bordered w-full pr-16" /> 
+                <button id="btn-apply" class="btn bg-prime-color text-white absolute top-0 right-0 rounded-l-none" disabled>Apply</button>
               </div>
-            <ol>
+            <ol id="selected-items" class="list-decimal px-4 mb-2">
 
             </ol>
             <hr>
             <ul class="mb-4 mt-4">
-                <li>Total Price: 00.00 TK</li>
-                <li>Discount: 00.00 TK</li>
-                <li>Total: 00.00 TK</li>
+                <li>Total Price: <span id="total-price">00.00</span> TK</li>
+                <li>Discount: <span id="discount">00.00</span> TK</li>
+                <li>Total: <span id="total">00.00</span> TK</li>
             </ul>
             <hr>
-            <button class="btn bg-prime-color text-white w-full mt-4">Make Purchase</button>
+            <button id="btn-purchase" class="btn bg-prime-color text-white w-full mt-4" disabled>Make Purchase</button>
         </div>
     </div>
   </main>
