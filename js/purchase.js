@@ -29,3 +29,6 @@ document.getElementById('btn-apply').addEventListener('click', function(){
      }
 })
 
+function goHome(){
+   location.reload();
+}

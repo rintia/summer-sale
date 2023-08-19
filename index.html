@@ -178,7 +178,21 @@
                 <li>Total: <span id="total">00.00</span> TK</li>
             </ul>
             <hr>
-            <button id="btn-purchase" class="btn bg-prime-color text-white w-full mt-4" disabled>Make Purchase</button>
+            <button  onclick="my_modal_1.showModal()" id="btn-purchase" class="btn bg-prime-color text-white w-full mt-4" disabled>Make Purchase</button>
+           <!-- modal -->
+           <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box">
+              <div class="flex justify-center">
+                <img src="./images/congo.png" alt="">
+              </div>
+              <h3 class="font-bold text-lg text-center">Congratulations</h3>
+              <p class="py-4 text-center">You Purchase The Product</p>
+              <div class="modal-action justify-center">
+                <!-- if there is a button in form, it will close the modal -->
+                <button onclick="goHome()" class="btn bg-prime-color text-white">Go home</button>
+              </div>
+            </form>
+          </dialog>
         </div>
     </div>
   </main>
