@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sale</title>
+    <!-- tailwind and daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom tailwind -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'prime-color' : '#E527B2',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+  <header>
+    <!-- banner section -->
+    <div class="hero bg-[#F9F6E2]">
+        <div class="hero-content gap-8 flex-col justify-end lg:flex-row-reverse">
+          <img src="./images/Summer 1.png" class="max-w-sm" />
+          <div class="text-center">
+            <h1 class="text-2xl mb-3">--SALES FEVER--</h1>
+            <h1 class="text-5xl font-bold pb-6">Purchase TK 200 or <br> above & get <span class="text-prime-color">20% off</span></h1>
+            <div class="flex justify-center items-center">
+            <p>Use Promo Code</p>
+            <button class="btn bg-prime-color text-white ml-4">SELL200</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>  
+  <main>
+
+  </main>
+</body>
+</html>
