@@ -25,7 +25,7 @@
   <header>
     <!-- banner section -->
     <div class="hero bg-[#F9F6E2]">
-        <div class="hero-content flex-col  lg:flex-row ">
+        <div class="hero-content flex-col  lg:flex-row gap-12">
           
           <div class="text-center">
             <h1 class="text-2xl mb-3">--SALES FEVER--</h1>
@@ -49,9 +49,9 @@
             <!-- cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- card-1 -->
-                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
-                    <figure class="px-10 pt-10">
-                      <img src="./images/prod1.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
+                <div onclick="clickHandler(this)" class="card bg-white shadow cursor-pointer p-4">
+                    <figure class="px-5 py-5 h-3/5 w-full bg-base-200 rounded-xl">
+                      <img src="./images/prod1.png" alt="Shoes" class="rounded-xl bg-base-200 h-full" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <div class="rating">
@@ -66,9 +66,9 @@
                     </div>
                   </div>
                 <!-- card-2 -->
-                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
-                    <figure class="px-10 pt-10">
-                      <img src="./images/prod2.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
+                <div onclick="clickHandler(this)" class="card bg-white shadow cursor-pointer p-4">
+                    <figure class="px-5 py-5 h-3/5 w-full bg-base-200 rounded-xl">
+                      <img src="./images/prod2.png" alt="Shoes" class="rounded-xl h-full" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <div class="rating">
@@ -83,9 +83,9 @@
                     </div>
                   </div>
                <!-- card-3 -->
-               <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
-                <figure class="px-10 pt-10">
-                  <img src="./images/prod3.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
+               <div onclick="clickHandler(this)" class="card bg-white shadow cursor-pointer p-4">
+                <figure class="px-5 py-5 h-3/5 w-full bg-base-200 rounded-xl">
+                  <img src="./images/prod3.png" alt="Shoes" class="rounded-xl bg-base-200 h-full" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <div class="rating">
@@ -107,9 +107,9 @@
             <!-- cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- card-4 -->
-                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
-                    <figure class="px-10 pt-10">
-                      <img src="./images/prod7.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
+                <div onclick="clickHandler(this)" class="card bg-white shadow cursor-pointer p-4">
+                    <figure class="px-5 py-5 h-3/5 w-full bg-base-200 rounded-xl">
+                      <img src="./images/prod7.png" alt="Shoes" class="rounded-xl bg-base-200 h-full" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <div class="rating">
@@ -124,9 +124,9 @@
                     </div>
                   </div>
                 <!-- card-5 -->
-                <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
-                    <figure class="px-10 pt-10">
-                      <img src="./images/prod8.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
+                <div onclick="clickHandler(this)" class="card bg-white shadow cursor-pointer p-4">
+                    <figure class="px-5 py-5 h-3/5 w-full bg-base-200 rounded-xl">
+                      <img src="./images/prod8.png" alt="Shoes" class="rounded-xl bg-base-200 h-full" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <div class="rating">
@@ -141,9 +141,9 @@
                     </div>
                   </div>
                <!-- card-6 -->
-               <div onclick="clickHandler(this)" class="card bg-white border cursor-pointer">
-                <figure class="px-10 pt-10">
-                  <img src="./images/prod9.png" alt="Shoes" class="rounded-xl bg-base-200 px-12 py-2" />
+               <div onclick="clickHandler(this)" class="card bg-white shadow cursor-pointer p-4">
+                <figure class="px-5 py-5 h-3/5 w-full bg-base-200 rounded-xl">
+                  <img src="./images/prod9.png" alt="Shoes" class="rounded-xl bg-base-200 h-full" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <div class="rating">
@@ -162,12 +162,17 @@
      </div>
     
         <!-- coupon & purchase -->
-        <div class=" px-4 pt-16 items-center">
-            <h1 class="font-semibold mb-2">Have a coupon?</h1>
+        <div class="  items-center">
+          <!-- coupon input -->
+            <div class="border px-4 pt-4 mt-16 bg-white shadow rounded-md">
+              <h1 class="font-semibold mb-2">Have a coupon?</h1>
             <div class="relative mb-4">
                 <input id="coupon-field" type="text" placeholder="coupon code" class="input input-bordered w-full pr-16" /> 
                 <button id="btn-apply" class="btn bg-prime-color text-white absolute top-0 right-0 rounded-l-none" disabled>Apply</button>
               </div>
+            </div>
+            <!-- purchase list -->
+           <div class="border mt-4 p-4 rounded-md shadow bg-white">
             <ol id="selected-items" class="list-decimal px-4 mb-2">
 
             </ol>
@@ -188,11 +193,12 @@
               <h3 class="font-bold text-lg text-center">Congratulations</h3>
               <p class="py-4 text-center">You Purchase The Product</p>
               <div class="modal-action justify-center">
-                <!-- if there is a button in form, it will close the modal -->
+                <!-- if there is a button in form, it will refresh the page -->
                 <button onclick="goHome()" class="btn bg-prime-color text-white">Go home</button>
               </div>
             </form>
           </dialog>
+           </div>
         </div>
     </div>
   </main>
