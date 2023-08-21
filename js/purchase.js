@@ -34,5 +34,13 @@ document.getElementById('btn-apply').addEventListener('click', function(){
 })
 
 function goHome(){
-   location.reload();
+   document.getElementById('total-price').innerText = '00.00';
+   document.getElementById('discount').innerText = '00.00';
+   document.getElementById('total').innerText = '00.00';
+   document.getElementById('selected-items').innerText = '';
+   document.getElementById('coupon-field').value = '';
+   document.getElementById('btn-purchase').disabled = true;
+   document.getElementById('btn-apply').disabled = true;
+   total = 0;
+   totalPrice = 0;
 }
